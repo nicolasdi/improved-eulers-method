@@ -5,13 +5,16 @@ __copyright__ = "2014 Jeremy Brown"
 __license__ = "MIT"
 
 """
+
 Improved Eurler's Method solver
 
+Inspired by my math homework, which showed me that Euler's Method is a very 
+repetitive process.  I couldn't find a tool that would easily let me solve 
+using this method and I didn't want to enter a few very similar forumlas 10 
+times with different values, so I wrote one myself. I also prefer coding to 
+doing my math homework so this is a compromise.
 
-Inspired by my math homework and realizing that Euler's Method is a very 
-repetitive process. I couldn't find a tool that would easily let me solve 
-using this method, so I figured I would write one myself.
-
+-----------------------------------------------------------------------------
 
 The MIT License (MIT)
 
@@ -31,12 +34,16 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
+-----------------------------------------------------------------------------
 
 Uses the simpleeval library by Daniel Fairhead for parsing equations.
 https://github.com/danthedeckie/simpleeval
+Distributed under the MIT License
 
+-----------------------------------------------------------------------------
 
 Usage:
+
 The script prompts for:
 - the ODE
 - initial value of x
@@ -61,6 +68,10 @@ Supported functions:
 
 """
 
+"""
+no y' = xy^2 - y/x
+"""
+
 from simpleeval import SimpleEval
 import math
 
@@ -78,9 +89,10 @@ def func_y(x, y, h, formula_string):
 
 def print_table(results):
 	"""Prints the presults to the console."""
-	print("RESULTS")
+	print("\n---RESULTS---\n")
 	for r in results:
 		print(r[0], "\t", r[1])
+	print()
 
 def prompt_value(message):
 	"""Prompts the user for a value and converts it to a float"""
@@ -129,8 +141,8 @@ formula_string = str(input("\nEnter an ODE (with all operators, incl. *) to be s
 
 x = prompt_value("Enter an initial x: ")
 y = prompt_value("Enter an initial y: ")
-MAX = prompt_value("Give the value to calculate up to: ")
-h = prompt_value("Give the step value (h) to use for the calculation: ")
+MAX = prompt_value("Enter the value to calculate up to: ")
+h = prompt_value("Enter the step value (h) to use for the calculation: ")
 
 results = []
 results.append([x, y])
