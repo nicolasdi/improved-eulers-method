@@ -5,6 +5,17 @@ A simple script that outputs a results table based on a given ordinary different
 
 Inspired by my math homework, which showed me that Euler's Method is a very repetitive process.  I couldn't find a tool that would easily let me solve using this method and I didn't want to enter a few very similar forumlas 10 times with different values, so I wrote one myself. I also prefer coding to doing my math homework so this is a compromise.
 
+##Requirements
+
+The equation parser used in this script is [simpleeval](https://github.com/danthedeckie/simpleeval), a great little tool put together by @danthedeckie.
+
+I will include it in this project soon, but for now you can install it easily with pip:
+
+```
+pip install simpleeval
+```
+
+
 ##Usage
 
 ###Entering the Equation
@@ -93,7 +104,7 @@ The currently supported functions are the following:
 - Ceiling: `ceil(x)`
 - Exponential: `exp(x)`
 - Logarithm: `ln(x)`, `log(x, base)`, `log10(x)`
-- Power: `pow(x, y)`
+- Power: `pow(x, y)`, (alternative to `x**y`)
 - Square root: `sqrt(x)`
 - Trig functions: `sin(x)`, `cos(x)`, `tan(x)`, `asin(x)`, `acos(x)`, `atan(x)`
 - Hyperbolic trig functions: `sinh(x)`, `cosh(x)`, `tanh(x)`, `asinh(x)`, `acosh(x)`, `atanh(x)`
@@ -105,5 +116,6 @@ They can be passed any integer or floating-point number, or the varaibles `x` or
 
 - [ ] Loss of precision
 - [ ] Found some incorrect functions giving incorrect results, definitely still needs work
+- [ ] Need to install the simpleeval library (will include soon)
 
 Basic concept at the moment, more thorough testing is definitely needed. Expansions and improvements that could be made remain to be seen. Suggestions are more than welcome.
