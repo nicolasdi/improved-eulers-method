@@ -72,7 +72,7 @@ Supported functions:
 no y' = xy^2 - y/x
 """
 
-from simpleeval import SimpleEval
+from simpleeval.simpleeval import SimpleEval
 import math
 
 def function(x, y, formula_string):
