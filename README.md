@@ -7,13 +7,9 @@ Inspired by my math homework, which showed me that Euler's Method is a very repe
 
 ##Requirements
 
-The equation parser used in this script is [simpleeval](https://github.com/danthedeckie/simpleeval), a great little tool put together by @danthedeckie.
+The equation parser used in this script is [simpleeval](https://github.com/danthedeckie/simpleeval), a great little tool put together by @danthedeckie. 
 
-I will include it in this project soon, but for now you can install it easily with pip:
-
-```
-pip install simpleeval
-```
+No need to install it anymore, it is included in the source
 
 
 ##Usage
