@@ -7,9 +7,9 @@ Inspired by my math homework, which showed me that Euler's Method is a very repe
 
 ##Requirements
 
-The equation parser used in this script is [simpleeval](https://github.com/danthedeckie/simpleeval), a great little tool put together by @danthedeckie. 
+The equation parser used in this script is [simpleeval](https://github.com/danthedeckie/simpleeval), a great little tool put together by [@danthedeckie](http://github.com/danthedeckie). 
 
-No need to install it anymore, it is included in the source
+No need to install it anymore, it is included in the source.
 
 
 ##Usage
@@ -105,13 +105,12 @@ The currently supported functions are the following:
 - Trig functions: `sin(x)`, `cos(x)`, `tan(x)`, `asin(x)`, `acos(x)`, `atan(x)`
 - Hyperbolic trig functions: `sinh(x)`, `cosh(x)`, `tanh(x)`, `asinh(x)`, `acosh(x)`, `atanh(x)`
 
-They can be passed any integer or floating-point number, or the varaibles `x` or `y`. You can include them within the entered ODE as you would any number
+They can be passed any integer or floating-point number, or the variables `x` or `y`. You can include them within the entered ODE as you would any number
 
 
 ##Limitations
 
 - [ ] Loss of precision
 - [ ] Found some incorrect functions giving incorrect results, definitely still needs work
-- [ ] Need to install the simpleeval library (will include soon)
 
 Basic concept at the moment, more thorough testing is definitely needed. Expansions and improvements that could be made remain to be seen. Suggestions are more than welcome.
