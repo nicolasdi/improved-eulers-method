@@ -8,10 +8,10 @@ __license__ = "MIT"
 
 Improved Eurler's Method solver
 
-Inspired by my math homework, which showed me that Euler's Method is a very 
-repetitive process.  I couldn't find a tool that would easily let me solve 
-using this method and I didn't want to enter a few very similar forumlas 10 
-times with different values, so I wrote one myself. I also prefer coding to 
+Inspired by my math homework, which showed me that Euler's Method is a very
+repetitive process.  I couldn't find a tool that would easily let me solve
+using this method and I didn't want to enter a few very similar forumlas 10
+times with different values, so I wrote one myself. I also prefer coding to
 doing my math homework so this is a compromise.
 
 -----------------------------------------------------------------------------
@@ -74,6 +74,7 @@ no y' = xy^2 - y/x
 
 from simpleeval.simpleeval import SimpleEval
 import math
+import matplotlib.pyplot as plt
 
 def function(x, y, formula_string):
 	"""Evaluate the passed formula using passed variables."""
@@ -93,6 +94,13 @@ def print_table(results):
 	for r in results:
 		print(r[0], "\t", r[1])
 	print()
+
+def plot_values(xvalues, yvalues):
+	"""Graph the obtained data"""
+	plt.plot(xvalues, yvalues, 'bo')
+	plt.xlabel('x')
+	plt.ylabel('y')
+	plt.show()
 
 def prompt_value(message):
 	"""Prompts the user for a value and converts it to a float"""
@@ -145,7 +153,11 @@ MAX = prompt_value("Enter the value to calculate up to: ")
 h = prompt_value("Enter the step value (h) to use for the calculation: ")
 
 results = []
+xvalues = []
+yvalues = []
 results.append([x, y])
+xvalues.append(x)
+yvalues.append(y)
 
 evaluator = SimpleEval(names={"x": x, "y": y, "pi": math.pi, "e": math.e}, functions=supported_functions)
 while x <= MAX:
@@ -154,5 +166,8 @@ while x <= MAX:
 
 	vals = [float("{0:.4f}".format(x)), float("{0:.4f}".format(y))]
 	results.append(vals)
+	xvalues.append(x)
+	yvalues.append(y)
 
 print_table(results)
+plot_values(xvalues, yvalues)
